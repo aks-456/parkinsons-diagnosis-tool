@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Parkinson's Disease Diagnosis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1>Parkinson's Disease Voice Analysis Diagnosis</h1>
+
+    <div id="controls">
+     <button id="recordButton">Record</button>
+     <button id="pauseButton" disabled>Pause</button>
+     <button id="stopButton" disabled>Stop</button>
+    </div>
+    <div id="formats">Sample rate will be shown upon recording</div>
+    <p><strong>Recordings:</strong></p>
+    <ol id="recordingsList"></ol>
+
+
+    <form action="http://127.0.0.1:5000/"method="post" enctype=multipart/form-data>
+      <input id = "filenameInput" type="text" name="filename" value="error" hidden="true">
+      <button id="btnDiagnose" type="submit"> Diagnose </button>
+    </form>
+ 
+    
+    
+    
+    
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="app.js"></script>
+  </body>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-storage.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    <!-- Add Firebase Database Credentials -->
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    
+</html>
+
+
+        
+
+    
+    
+    
+
