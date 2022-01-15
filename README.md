@@ -22,7 +22,7 @@ I used a number of different approaches to classify the data, which was arranged
 * Bagging Classifier - 89.9 % 
 * Gradient Boosting - 89.8 % 
 
-The most accurate one being the RFC model, with an accuracy of 94.9 % as mentioned above. More specifically, of the 59 sets of data used for testing, the RFC model accurately predicted 56. Note that the accuracy changes per each classification, but the model with 94.9% accuracy is labelled: 'model.sav'. The creation of this model can be done by running the Jupyter Notebook file: Model/PD Analysis RFC Model.ipynb. Note that before doing so, it is necessary to run Model/Data/PD Analysis Data.ipynb to create a readible dataset. 
+The most accurate one being the RFC model, with an accuracy of 94.9 % as mentioned above. More specifically, of the 59 sets of data used for testing, the RFC model accurately predicted 56. Note that the accuracy changes per each classification, but the model with 94.9% accuracy is labelled: 'model.sav'. This model can be created by running: 'Model/PD Analysis RFC Model.ipynb'. Note that before doing so, it is necessary to run 'Model/Data/PD Analysis Data.ipynb' to create a readible set of data. 
 
 ## Frontend
 
