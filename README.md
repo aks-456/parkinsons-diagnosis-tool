@@ -37,4 +37,4 @@ This is responsible for the extraction of vocal features from the voice recordin
 
 In addition to the flask server pyrebase was used to store and retrieve the audio recordings. The frontend sends the audio recording to firebase, and the backend flask server retrieves it each time a user has recorded their voice. The only change required to make is the Firebase database credentials which are unique for each application/developer, which must be replaced where indicated, in "diagnosis_tool/backend/main.py" and "diagnosis_tool/frontend/index.html". 
 
-Date of Project: December, 2020
+__Date of Project:__ December, 2020
