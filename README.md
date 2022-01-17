@@ -1,4 +1,4 @@
-## Parkinson's Disease Diagnosis Tool using Vocal Features
+## Parkinson's Disease Diagnosis Tool
 
 Note: It is also possible to use the diagnosis tool with a classification model of your choice, as the tool is not dependent on the model. 
 
