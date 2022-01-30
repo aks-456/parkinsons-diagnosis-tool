@@ -1,7 +1,5 @@
 ## Parkinson's Disease Diagnosis Tool
 
-Note: It is also possible to use the diagnosis tool with a classification model of your choice, as the tool is not dependent on the model. 
-
 Parkinson's Disease (PD) affects Biomedical Voice Measurements (Vocal features) in patients. Affected vocal features include:
 
 * MDVP:Fo(Hz) - Average vocal fundamental frequency 
@@ -26,9 +24,12 @@ A number of different approaches were used to classify the data, which was arran
 
 The most accurate one being the RFC model, with an accuracy of 94.9 % as mentioned above. More specifically, of the 59 sets of data used for testing, the RFC model accurately predicted 56. Note that the accuracy changes per each classification, but the model with 94.9% accuracy is labelled: 'model.sav'. A new model can be created by running: 'Model/PD Analysis RFC Model.ipynb'. Note that before doing so, it is necessary to run 'Model/Data/PD Analysis Data.ipynb' to create a readible set of data. 
 
+**Note: It is also possible to use the diagnosis tool with a classification model of your choice**
+
 ## Frontend
 
-The diagnosis tool is to perform a diagnosis of PD. It records the user's "sustained pronounciation" of the vowel a, (which according to: 'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection', Little MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM. BioMedical Engineering OnLine 2007, 6:23 (26 June 2007) is the most effective in obtaining vocal features for PD Diagnosis). The UI is written in html and is a modified version of a wav file recorder made by [octavn](https://github.com/octavn) and can be found here: https://github.com/addpipe/simple-recorderjs-demo. The frontend code can be found to in the folder labelled: "diagnosis_tool/frontend". 
+The diagnosis tool is to perform a diagnosis of PD. It records the user's "sustained pronounciation" of the vowel a, (which according to: 'Exploiting Nonlinear Recurrence and Fractal Scaling Properties for Voice Disorder Detection', Little MA, McSharry PE, Roberts SJ, Costello DAE, Moroz IM. BioMedical Engineering OnLine 2007, 6:23 (26 June 2007) is the most effective in obtaining vocal features for PD Diagnosis). The frontend code can be found to in the folder labelled: "diagnosis_tool/frontend". 
+
 Note: The wav file recorder only works on **Chrome** and **Firefox** browsers.
 
 ## Backend
@@ -37,4 +38,4 @@ This is responsible for the extraction of vocal features from the voice recordin
 
 In addition to the flask server pyrebase was used to store and retrieve the audio recordings. The frontend sends the audio recording to firebase, and the backend flask server retrieves it each time a user has recorded their voice. The only change required to make is the Firebase database credentials which are unique for each application/developer, which must be replaced where indicated, in "diagnosis_tool/backend/main.py" and "diagnosis_tool/frontend/index.html". 
 
-__Date of Project:__ December, 2020
+**Date Created:** December, 2020
